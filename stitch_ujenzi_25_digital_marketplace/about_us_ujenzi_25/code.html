@@ -1,0 +1,239 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>UJENZI 25 - About Us</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dcd9dc",
+                        "on-tertiary-fixed": "#221b00",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#beab57",
+                        "surface": "#fbf8fb",
+                        "surface-variant": "#e4e2e4",
+                        "on-primary-fixed-variant": "#3b4662",
+                        "surface-container": "#f0edf0",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#303032",
+                        "on-primary-container": "#8691b0",
+                        "on-error": "#ffffff",
+                        "primary": "#09152e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "outline-variant": "#c6c6ce",
+                        "on-tertiary-fixed-variant": "#534600",
+                        "background": "#fbf8fb",
+                        "outline": "#76777e",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#1f2a44",
+                        "surface-container-low": "#f5f3f5",
+                        "primary-fixed-dim": "#bbc6e7",
+                        "tertiary-fixed": "#f8e288",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-high": "#eae7ea",
+                        "tertiary-fixed-dim": "#dbc66f",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "primary-fixed": "#d9e2ff",
+                        "surface-bright": "#fbf8fb",
+                        "secondary": "#904d00",
+                        "on-secondary-fixed": "#2f1500",
+                        "tertiary": "#6d5e10",
+                        "surface-tint": "#535e7b",
+                        "inverse-primary": "#bbc6e7",
+                        "surface-container-highest": "#e4e2e4",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1b1b1d",
+                        "on-tertiary-container": "#4b3f00",
+                        "secondary-fixed": "#ffdcc3",
+                        "secondary-container": "#fe932c",
+                        "on-primary-fixed": "#0f1b34",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-secondary-container": "#663500",
+                        "on-background": "#1b1b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "margin-desktop": "48px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-padding": "80px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "label-mono": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgba(198, 198, 206, 0.2); }
+    </style>
+</head>
+<body class="text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-primary dark:bg-primary docked full-width top-0 sticky z-50 backdrop-blur-md bg-opacity-90 shadow-sm shadow-sm hidden md:block">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-primary">UJENZI 25</div>
+<div class="flex items-center space-x-gutter">
+<a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-on-primary transition-colors hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded-lg" href="#">Home</a>
+<a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-on-primary transition-colors hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded-lg" href="#">Services</a>
+<a class="font-label-mono text-label-mono text-secondary-container font-bold border-b-2 border-secondary-container pb-1 hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded-lg scale-95 transition-transform" href="#">About</a>
+<a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-on-primary transition-colors hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded-lg" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-stack-md">
+<button class="font-label-mono text-label-mono text-on-primary hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded-lg">EN/SW</button>
+<button class="bg-[#D97706] text-white font-label-mono text-label-mono px-6 py-2.5 rounded-xl hover:opacity-90 transition-opacity">Get Started</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Nav (Simplified) -->
+<nav class="bg-primary docked full-width top-0 sticky z-50 flex md:hidden items-center justify-between px-margin-mobile h-20 shadow-sm">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary">UJENZI 25</div>
+<button class="text-on-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-stack-lg">
+<div class="text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-stack-md">Building Tanzania, One Foundation at a Time</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Delivering premium construction and development solutions with uncompromising quality and local expertise.</p>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6">
+<img class="w-full h-auto rounded-xl shadow-[0_4px_12px_rgba(31,42,68,0.08)] object-cover aspect-video md:aspect-square" data-alt="A professional architectural photograph of a modern, high-end corporate office in Dar es Salaam, Tanzania. The scene features a diverse team of architects and engineers reviewing blueprints around a large minimalist table. Sunlight streams through expansive floor-to-ceiling windows, casting soft shadows. The atmosphere is established, modern, and collaborative, with a color palette of crisp whites, deep navy accents, and warm natural wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYrBmtdpWlJc9DW2jNGLXxL4Vkn31SHM-rmyAoxg_5WkdQIihQ-Nbn7jPfsCb63WLNDkhn25IR8i8WNmc9rCsziQ7G2TEhwWiB-GadR7vPwOxZM01Rka2seaTWsDel9PSbixqQomgez4kCQAWd2qQzF9ugmOPVOJeDu5iBF6Df1CniNGIyNeacH72twrjX0aPcojKdHCeGhpjWnBQu_TpaMoTMtz9n3m-V_edYLbURGCaq8f5S_84O">
+</div>
+<div class="md:col-span-6 md:pl-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Our Mission</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">At UJENZI 25, we are committed to reshaping the skyline and infrastructure of Tanzania through innovative engineering, sustainable practices, and unwavering dedication to excellence. Our approach bridges international standards with deep local understanding.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">We believe that every structure we build is a testament to our core values: integrity, precision, and partnership. From commercial high-rises to bespoke residential developments, our focus remains on delivering long-term value to our clients and communities.</p>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-section-padding bg-white border-y border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter text-center">
+<div class="flex flex-col items-center justify-center p-stack-lg">
+<div class="w-24 h-24 rounded-full bg-primary flex items-center justify-center mb-stack-sm shadow-[0_6px_16px_rgba(31,42,68,0.15)]">
+<span class="font-display-lg text-display-lg text-on-primary">50+</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mt-stack-sm">Projects Delivered</span>
+</div>
+<div class="flex flex-col items-center justify-center p-stack-lg">
+<div class="w-24 h-24 rounded-full bg-primary flex items-center justify-center mb-stack-sm shadow-[0_6px_16px_rgba(31,42,68,0.15)]">
+<span class="font-display-lg text-display-lg text-on-primary">5</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mt-stack-sm">Core Services</span>
+</div>
+<div class="flex flex-col items-center justify-center p-stack-lg">
+<div class="w-24 h-24 rounded-full bg-primary flex items-center justify-center mb-stack-sm shadow-[0_6px_16px_rgba(31,42,68,0.15)]">
+<span class="font-display-lg text-display-lg text-on-primary">25</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mt-stack-sm">Est. 2025</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary">Leadership</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+<div class="bg-white p-stack-lg rounded-xl shadow-[0_4px_12px_rgba(31,42,68,0.08)] flex flex-col items-center text-center">
+<img class="w-40 h-40 rounded-full object-cover mb-stack-md border-4 border-surface-container" data-alt="A professional, high-resolution corporate headshot of a confident Tanzanian male CEO in his mid-40s. He is wearing a sharp, modern navy blue suit with a crisp white shirt, standing against a clean, softly lit light gray background. The lighting is premium and flattering, conveying authority, trust, and modern business acumen. The aesthetic aligns with a high-end corporate construction firm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWgmqG3uqlkWP-EjPWjupXBDGWnmmapOMm4FHa8UMAvf1GF4CUj12DGyhpNyHQnEk9nRFRzNi5h3lpZQXJ6AzfIUzjyhxV9PNrAQ_TXc9jXeN2xFLPI9vw48PxPDR3boVliKMeXDBU3Ik-SudE55VWtkOZtkSFfj4TjKuQ9IIaPpSC2MM4-YP2SvEYM18wwSE-qMKuBl93vXIWxfAONpOeGqULsjyVOuQ4kwXpD6shLyOsqoGmrjHR">
+<h3 class="font-headline-sm text-headline-sm text-primary">David M.</h3>
+<p class="font-label-mono text-label-mono text-[#D97706] mb-stack-sm">Chief Executive Officer</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Over 15 years of experience leading major infrastructure projects across East Africa.</p>
+</div>
+<div class="bg-white p-stack-lg rounded-xl shadow-[0_4px_12px_rgba(31,42,68,0.08)] flex flex-col items-center text-center">
+<img class="w-40 h-40 rounded-full object-cover mb-stack-md border-4 border-surface-container" data-alt="A professional, high-resolution corporate headshot of an experienced Tanzanian female Lead Engineer in her late 30s. She is wearing professional business attire with subtle safety gear hints, such as a high-quality branded polo under a tailored blazer. The background is a clean, bright architectural space with subtle structural elements out of focus. The lighting is crisp and modern, reflecting competence and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaH_2IJMNz5PmACGQuaLnH6Y1DF_2V3dSF4_DcyAbTZrgbK8UX69sBOGdNYlKF8qF60O_YUYqrMVzuaHAPVxH_aKVGBndKJTqD7A6ILz2Z3Vijr0mhEdHmIYAnZafnxghzyPibXJyVCFSqPHGtjuLnR5Ul10Tq0K0DOTJsLaRB4rPy8_KjPzvQPBNSXANoPSFdunbcj-0twKospHeej98jw9Yhup0WpEzNuFA_S1MbTpBidkeCTf_h">
+<h3 class="font-headline-sm text-headline-sm text-primary">Sarah K.</h3>
+<p class="font-label-mono text-label-mono text-[#D97706] mb-stack-sm">Lead Engineer</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Specializing in sustainable structural design and innovative construction methodologies.</p>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mb-stack-lg">Accreditations &amp; Certifications</h3>
+<div class="flex flex-wrap justify-center items-center gap-stack-lg opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+<!-- Badges simulated with text/icons for clean UI as per requirements -->
+<div class="flex items-center space-x-2 bg-white px-6 py-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-headline-sm text-headline-sm text-primary">NCC</span>
+</div>
+<div class="flex items-center space-x-2 bg-white px-6 py-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">architecture</span>
+<span class="font-headline-sm text-headline-sm text-primary">AQRB</span>
+</div>
+<div class="flex items-center space-x-2 bg-white px-6 py-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">engineering</span>
+<span class="font-headline-sm text-headline-sm text-primary">ERB</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary full-width border-t border-outline-variant/20 flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg py-section-padding px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary mb-stack-sm">UJENZI 25</div>
+<p class="font-body-md text-body-md text-on-primary/70">Building Tanzania's future.</p>
+</div>
+<div>
+<ul class="space-y-stack-sm">
+<li><a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Info</a></li>
+<li><a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Links</a></li>
+<li><a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Services</a></li>
+<li><a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 text-right self-end mt-stack-lg md:mt-0">
+<p class="font-label-mono text-label-mono text-on-primary/50">© 2024 UJENZI 25. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>UJENZI 25 - Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#dcd9dc",
+                      "on-tertiary-fixed": "#221b00",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#beab57",
+                      "surface": "#fbf8fb",
+                      "surface-variant": "#e4e2e4",
+                      "on-primary-fixed-variant": "#3b4662",
+                      "surface-container": "#f0edf0",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#303032",
+                      "on-primary-container": "#8691b0",
+                      "on-error": "#ffffff",
+                      "primary": "#09152e",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "outline-variant": "#c6c6ce",
+                      "on-tertiary-fixed-variant": "#534600",
+                      "background": "#fbf8fb",
+                      "outline": "#76777e",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#1f2a44",
+                      "surface-container-low": "#f5f3f5",
+                      "primary-fixed-dim": "#bbc6e7",
+                      "tertiary-fixed": "#f8e288",
+                      "on-surface-variant": "#45464d",
+                      "surface-container-high": "#eae7ea",
+                      "tertiary-fixed-dim": "#dbc66f",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "primary-fixed": "#d9e2ff",
+                      "surface-bright": "#fbf8fb",
+                      "secondary": "#904d00",
+                      "on-secondary-fixed": "#2f1500",
+                      "tertiary": "#6d5e10",
+                      "surface-tint": "#535e7b",
+                      "inverse-primary": "#bbc6e7",
+                      "surface-container-highest": "#e4e2e4",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1b1b1d",
+                      "on-tertiary-container": "#4b3f00",
+                      "secondary-fixed": "#ffdcc3",
+                      "secondary-container": "#fe932c",
+                      "on-primary-fixed": "#0f1b34",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-secondary-container": "#663500",
+                      "on-background": "#1b1b1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "margin-desktop": "48px",
+                      "stack-md": "16px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "section-padding": "80px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Sora"],
+                      "headline-md": ["Sora"],
+                      "display-lg-mobile": ["Sora"],
+                      "display-lg": ["Sora"],
+                      "label-mono": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .project-card:hover .project-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .project-overlay {
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .image-compare-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .image-compare-slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            cursor: ew-resize;
+            z-index: 10;
+        }
+        .image-compare-slider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-compare-handle-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 11;
+            color: #1F2A44;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-primary text-on-primary font-headline-sm text-headline-sm full-width top-0 sticky z-50 backdrop-blur-md bg-opacity-90 shadow-sm flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="font-headline-md text-headline-md font-bold text-on-primary">
+            UJENZI 25
+        </div>
+<div class="hidden md:flex space-x-gutter">
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded font-label-mono text-label-mono" href="#">Home</a>
+<a class="text-secondary-container font-bold border-b-2 border-secondary-container pb-1 hover:bg-white/10 transition-all duration-200 px-4 py-2 font-label-mono text-label-mono" href="#">Services</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded font-label-mono text-label-mono" href="#">About</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors hover:bg-white/10 transition-all duration-200 px-4 py-2 rounded font-label-mono text-label-mono" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-stack-md">
+<span class="font-label-mono text-label-mono cursor-pointer hover:text-secondary-container transition-colors">EN/SW</span>
+<button class="bg-[#D97706] text-white px-6 py-2 rounded-xl font-label-mono text-label-mono hover:opacity-90 transition-opacity">Get Started</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative h-[614px] min-h-[500px] flex items-center justify-center w-full bg-primary overflow-hidden">
+<div class="absolute inset-0 w-full h-full">
+<img class="w-full h-full object-cover opacity-60 mix-blend-overlay" data-alt="A striking high-angle architectural photograph of a modern, premium commercial building complex currently under construction in a bright, sunlit urban environment. The scene showcases clean geometric lines of exposed concrete, structural steel, and large glass panels reflecting the clear blue sky. The lighting is crisp and natural, casting sharp, dramatic shadows that emphasize depth and form. The aesthetic is clean, professional, and established, aligning with a high-end corporate construction firm identity in a modern light-mode setting. Colors are primarily cool blues, warm whites, and industrial grays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ_JA4RfeVMcjoOLfI3lpnf2uwcsDuzsiwmanzf7F6itxa8BC43brF9MJHID2EgWfHy-eBQmI1y5Mhobzk2FX0KnPbertnGnGAX863le1VNU8OexCgDmUBQlUjIMwv8UxUdIojgVJniZWEC2Pw4bGL_GsZfiMdKg1uYg9YBRVUf7YX3bxCYJ2qRpjntxX2-XFpHCllhClRxDv3U3-Qt2l9PgDA0boTkTcV7Xf0zMWbwrnEpdb5IxXv">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-md text-center max-w-4xl tracking-tight">Our Work</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl text-center">Showcasing a legacy of structural excellence and modern design across Tanzania's growing landscape.</p>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Filters -->
+<div class="flex flex-wrap gap-stack-sm mb-stack-lg justify-center md:justify-start">
+<button class="bg-primary text-white px-4 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-wider text-xs">All</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-surface-dim transition-colors px-4 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-wider text-xs border border-outline-variant/30">Consultation</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-surface-dim transition-colors px-4 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-wider text-xs border border-outline-variant/30">Construction</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-surface-dim transition-colors px-4 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-wider text-xs border border-outline-variant/30">Real Estate</button>
+</div>
+<!-- Masonry Grid -->
+<div class="columns-1 md:columns-2 lg:columns-3 gap-gutter space-y-gutter">
+<!-- Project Card 1 -->
+<div class="project-card group relative break-inside-avoid rounded-xl overflow-hidden bg-white shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-all duration-300 cursor-pointer">
+<img class="w-full object-cover" data-alt="A professional, eye-level architectural photograph of a newly completed modern luxury villa in Arusha, Tanzania, captured during golden hour. The building features expansive floor-to-ceiling windows, natural stone cladding, and warm wood accents, set against a beautifully landscaped garden with native plants. The lighting is warm and inviting, highlighting the premium finishes and clean structural lines. The aesthetic is sophisticated, airy, and high-end, perfectly suited for a premium real estate portfolio. The color palette emphasizes warm earth tones, crisp whites, and the vibrant greens of the surrounding foliage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzWtm1orupTkY9MS9JUGo35zHLz39L5RAa0cwv0E0-FUcULJ96Prp_QqNn-WD2kWyjKjo7P8zYYa_ErlHeT0UQ4-ZIvO2tBQHE8VFmFY7GnEpdeU-3jVYANVRNAYYHvClCtjzfzNHh47xRY8qMfxWzRPswFubgipQtKOdhYVmcW2l2xUZ7MWfyPkM0gSzgmMncHv8GBFQnGVeQXyB2RZlE-3czvylAb8AlPOFGnkndaz1xfI_knBwA">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full font-label-mono text-[10px] uppercase font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Arusha
+                        </span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent project-overlay flex flex-col justify-end p-6 text-white">
+<span class="font-label-mono text-[10px] uppercase text-tertiary-fixed tracking-widest mb-2">Real Estate</span>
+<h3 class="font-headline-sm text-headline-sm mb-2 text-white">Serengeti Heights Villa</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">A premium residential development offering panoramic views and sustainable modern luxury design in the heart of Arusha.</p>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="project-card group relative break-inside-avoid rounded-xl overflow-hidden bg-white shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-all duration-300 cursor-pointer">
+<img class="w-full object-cover aspect-[3/4]" data-alt="A dynamic, low-angle construction progress photograph of a massive commercial office tower in Dodoma, Tanzania. The image focuses on the intricate geometric lattice of steel girders and freshly poured concrete pillars against a clear, bright blue sky. Cranes are visible in the background, conveying activity and progress. The lighting is harsh midday sun, creating strong contrasts and emphasizing the structural solidity of the build. The aesthetic is industrial yet clean and highly professional, reflecting established corporate capabilities. Colors are dominated by cool blues, stark grays, and the safety orange of construction equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfFNiuLIpgIJPln3rFLeYHp6W-qQKpiaT0mK9Iq-kaUxWrIWF_Orhl0AnXdfHyT5MtcIngtgE5UjNSLEkcdLH0IamyaI_-mOm4pGBflRQ2bVDGjrsz8_Unmb_n_0AUGoX3jQ7vThJVA6Ne_2E3cP1uIVTe8o0jnRR0jxETC0cBqLInyjGK41wcSLXSTzDZ18PsE67fuEyCOUJmbsvzVLrcpK4AiF_W0dKUugMXt7pF70K-y0ol6CrV">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full font-label-mono text-[10px] uppercase font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Dodoma
+                        </span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent project-overlay flex flex-col justify-end p-6 text-white">
+<span class="font-label-mono text-[10px] uppercase text-tertiary-fixed tracking-widest mb-2">Construction</span>
+<h3 class="font-headline-sm text-headline-sm mb-2 text-white">Capital Tower Phase II</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Structural framework and core concrete pouring for a new 15-story commercial hub in the capital district.</p>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="project-card group relative break-inside-avoid rounded-xl overflow-hidden bg-white shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-all duration-300 cursor-pointer">
+<img class="w-full object-cover" data-alt="An interior architectural photograph of a highly polished, modern corporate lobby space. The image shows a sweeping curved reception desk made of dark polished stone, contrasting with pristine white marble floors and warm, slatted wood acoustic ceiling panels. Large glass walls allow soft natural light to flood the space. The mood is serene, authoritative, and extremely premium. The aesthetic is clean minimalism with high-end finishes, suitable for a top-tier construction firm's portfolio. The color palette revolves around cool whites, deep charcoals, and rich timber tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACOIyOYbZjcGbKag9intmbnv3ssWvZvApowxa2LEpgqoxBIx4SH3NgismBU6rhJfoSbvTEqFolGGs9ibj8bVY4Wlei5EdauYYk3oOYFD6atEXYoO8NSUsGq_f0onEy11KZwVaqF7BN8D_TQWeX47AbmbJspgfn89JcRdBW9s8VA5TH2a1f9c9g4xAf8Yb_wm5JxgP-FMkOUulghTnWKk-lzMqN8jyif7EPPUkXZmDfLLxxAMOCsr-u">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full font-label-mono text-[10px] uppercase font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Dar es Salaam
+                        </span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent project-overlay flex flex-col justify-end p-6 text-white">
+<span class="font-label-mono text-[10px] uppercase text-tertiary-fixed tracking-widest mb-2">Consultation</span>
+<h3 class="font-headline-sm text-headline-sm mb-2 text-white">HQ Interior Redesign</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Comprehensive space planning and material consultation for a flagship corporate headquarters.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Before/After Module -->
+<section class="py-section-padding bg-surface-container-low w-full">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-stack-lg max-w-2xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">Transformation in Progress</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">See the tangible impact of our structural planning and execution. Drag the slider to compare the initial site phase with the completed foundation work.</p>
+</div>
+<div class="rounded-xl overflow-hidden shadow-[0_6px_12px_rgba(31,42,68,0.08)] border border-outline-variant/20 relative aspect-video bg-surface">
+<div class="image-compare-container h-full" id="compare-container">
+<!-- Before Image (Background) -->
+<div class="absolute inset-0 w-full h-full select-none" data-alt="A wide-angle, slightly desaturated photograph of an empty, dusty construction site before major work begins. The ground is uneven, marked by tractor tracks and scattered raw materials. The sky is slightly overcast, creating flat, neutral lighting. The scene looks chaotic but full of potential, representing the 'before' state of a major commercial build. The aesthetic is raw and industrial, focusing on the scale of the earthworks required. Colors are earthy browns, dusty grays, and muted greens from sparse surrounding vegetation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0kCAKdx9Wuuw7UGbq_6h-EsoVL-THXGb0eLj8fZMpRRpVotpDeiHtVRzYTcpevZhjGOBBYfdLz42r1QmslSGJD9oRDKDtpZgmuhbfRKxsIIvyxS7gJIZDc2NW0yWKhUR6AiCEF6p5Qt81RVzd1l_l2Lyu5_XfOlJJM8gWhu1WrK9vkZpi_YZDNoD75aRwnXOIP11Qb_wUnwxUTJO425atHImJghPGn2asC5xsQAaZpTs8UcS9xVtl'); background-size: cover; background-position: center;">
+</div>
+<!-- After Image (Clipped) -->
+<div class="absolute inset-0 h-full select-none" id="compare-after" style="width: 50%; border-right: 4px solid white; overflow: hidden;">
+<div class="absolute top-0 left-0 h-full w-[200%] max-w-[200vw]" data-alt="A vibrant, high-contrast wide-angle photograph taken from the exact same vantage point as the 'before' image, showing the completed foundation and lower structural levels of a massive commercial complex. Crisp white concrete pillars stand in perfect alignment upon a clean, level slab. The sky is a bright, clear blue, casting sharp shadows that highlight the geometric precision of the work. The scene represents order, progress, and high-quality engineering. The aesthetic is polished, professional, and visually striking. Colors are vibrant whites, stark concrete grays, and clear sky blues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHANAdlNEX94dfqvoUB3l6eO6Bu1CjNC8WmS6eV50PZBmi0DKzHHN9Z63VhK-tK59sdErDjeBdglAWHatzIxqQ8DsgTMvwXKJR3gSF0j4StihQzvO7HArMAW6BjXe0lMuU9CDm6kG55NeRersvTg27e_PTdu2HeGBkI8kaM2LGdex3XNTFPIQPMr8-awknlaZIFZcyZ0qJAj6wp2WA2xTFQhKN38XZ5ZooTYJ3Fvgti72MuFGVLK1w'); background-size: cover; background-position: center; width: 100vw; max-width: 1280px;">
+</div>
+</div>
+<!-- Labels -->
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded font-label-mono text-xs shadow-md z-20 pointer-events-none">AFTER</div>
+<div class="absolute top-4 right-4 bg-surface text-primary px-3 py-1 rounded font-label-mono text-xs shadow-md z-20 pointer-events-none">BEFORE</div>
+<!-- Slider Handle -->
+<div class="absolute top-0 bottom-0 left-[50%] w-1 bg-white cursor-ew-resize z-30 transform -translate-x-1/2 flex items-center justify-center" id="compare-slider">
+<div class="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-primary/10">
+<span class="material-symbols-outlined text-primary text-lg pointer-events-none">sync_alt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary text-on-primary font-body-md text-body-md full-width border-t border-outline-variant/20 grid grid-cols-1 md:grid-cols-4 gap-stack-lg py-section-padding px-margin-desktop max-w-container-max mx-auto w-full">
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary mb-stack-sm">
+                UJENZI 25
+            </div>
+<p class="text-on-primary-fixed-variant text-sm">© 2024 UJENZI 25. All rights reserved.</p>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-white mb-4">Info</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-label-mono text-label-mono" href="#">About Us</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-label-mono text-label-mono" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-white mb-4">Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-label-mono text-label-mono" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-label-mono text-label-mono" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-label-mono text-label-mono" href="#">Consultation</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-container transition-colors font-label-mono text-label-mono" href="#">Construction</a></li>
+</ul>
+</div>
+</footer>
+<script>
+        // Simple Image Comparison Slider Logic
+        const container = document.getElementById('compare-container');
+        const slider = document.getElementById('compare-slider');
+        const afterImage = document.getElementById('compare-after');
+        let isDragging = false;
+
+        if(container && slider && afterImage) {
+            const slide = (x) => {
+                const rect = container.getBoundingClientRect();
+                let percentage = ((x - rect.left) / rect.width) * 100;
+                
+                // Clamp between 0 and 100
+                percentage = Math.max(0, Math.min(100, percentage));
+                
+                slider.style.left = `${percentage}%`;
+                afterImage.style.width = `${percentage}%`;
+            };
+
+            slider.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                slide(e.clientX);
+            });
+
+            // Touch support
+            slider.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                slide(e.touches[0].clientX);
+            });
+        }
+    </script>
+</body></html>

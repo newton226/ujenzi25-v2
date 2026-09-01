@@ -1,0 +1,400 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>UJENZI 25 - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#dcd9dc",
+                        "on-tertiary-fixed": "#221b00",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#beab57",
+                        "surface": "#fbf8fb",
+                        "surface-variant": "#e4e2e4",
+                        "on-primary-fixed-variant": "#3b4662",
+                        "surface-container": "#f0edf0",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#303032",
+                        "on-primary-container": "#8691b0",
+                        "on-error": "#ffffff",
+                        "primary": "#09152e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "outline-variant": "#c6c6ce",
+                        "on-tertiary-fixed-variant": "#534600",
+                        "background": "#fbf8fb",
+                        "outline": "#76777e",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#1f2a44",
+                        "surface-container-low": "#f5f3f5",
+                        "primary-fixed-dim": "#bbc6e7",
+                        "tertiary-fixed": "#f8e288",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-high": "#eae7ea",
+                        "tertiary-fixed-dim": "#dbc66f",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "primary-fixed": "#d9e2ff",
+                        "surface-bright": "#fbf8fb",
+                        "secondary": "#904d00",
+                        "on-secondary-fixed": "#2f1500",
+                        "tertiary": "#6d5e10",
+                        "surface-tint": "#535e7b",
+                        "inverse-primary": "#bbc6e7",
+                        "surface-container-highest": "#e4e2e4",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1b1b1d",
+                        "on-tertiary-container": "#4b3f00",
+                        "secondary-fixed": "#ffdcc3",
+                        "secondary-container": "#fe932c",
+                        "on-primary-fixed": "#0f1b34",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-secondary-container": "#663500",
+                        "on-background": "#1b1b1d"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-sm": "8px",
+                        "margin-desktop": "48px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-padding": "80px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px"
+                    },
+                    fontFamily: {
+                        "headline-sm": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "label-mono": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-sm": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "display-lg-mobile": ["36px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "label-mono": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-primary text-on-primary docked full-width top-0 sticky z-50 backdrop-blur-md bg-opacity-90 shadow-sm shadow-sm transition-all duration-300 w-full">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-gutter">
+<a class="font-headline-md text-headline-md font-bold text-on-primary" href="#">
+                    UJENZI 25
+                </a>
+<div class="hidden md:flex gap-stack-md ml-margin-desktop">
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors font-label-mono text-label-mono px-3 py-2 rounded hover:bg-white/10 transition-all duration-200" href="#">Home</a>
+<a class="text-secondary-container font-bold border-b-2 border-secondary-container pb-1 font-label-mono text-label-mono px-3 py-2 rounded hover:bg-white/10 transition-all duration-200" href="#">Services</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors font-label-mono text-label-mono px-3 py-2 rounded hover:bg-white/10 transition-all duration-200" href="#">About</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors font-label-mono text-label-mono px-3 py-2 rounded hover:bg-white/10 transition-all duration-200" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="font-label-mono text-label-mono text-on-primary hover:text-secondary-container transition-colors hidden md:block">EN/SW</button>
+<button class="bg-secondary-container text-primary font-label-mono text-label-mono px-4 py-2 rounded-lg font-bold hover:bg-white/10 transition-all duration-200 hover:text-on-primary">Get Started</button>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Header / Hero Section -->
+<header class="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A wide-angle, high-end architectural photograph of a modern luxury apartment complex in Dar es Salaam. The building features clean lines, expansive glass windows, and warm wooden accents. The lighting is bright and sunny, conveying a premium, professional, and optimistic 'Established Modernity' aesthetic typical of high-net-worth real estate. The sky is clear blue." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA75ywCfCcnAHBbYqsMFlahJ96yXLKfeHNQiQjZSc8CeBtc34KxUaSKSF16cfV0D2SvBxj0Fc8HrJ2Lpo3EEv_5ceTbDJo_O2UPWMobOAgJJN5UvyHnD9EKiNbdca5glrXNpOQd0r_0CBs3w7Nrv-SUmShD6as79v9f4nnjQKfPwJ01uCgV0NRRtspVivC-VB2QbfHxFJQt2PdBSjommX7Lm4oc8pRaEQvr3AZMTJyQPF8yYAjxWaXW')"></div>
+<div class="absolute inset-0 z-10 bg-primary/60"></div>
+<div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-primary mb-stack-sm">Premium Real Estate</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto">Discover our portfolio of verified properties and high-end construction projects tailored for discerning developers and homeowners.</p>
+</div>
+</header>
+<!-- Main Content -->
+<main class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Filter/Sort (Simplified) -->
+<div class="flex flex-col md:flex-row justify-between items-center mb-stack-lg gap-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Available Properties</h2>
+<div class="flex gap-stack-sm">
+<button class="flex items-center gap-base px-4 py-2 border-[1.5px] border-outline-variant rounded-full text-on-surface-variant hover:border-primary-container transition-colors font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
+                    Filter
+                </button>
+<button class="flex items-center gap-base px-4 py-2 border-[1.5px] border-outline-variant rounded-full text-on-surface-variant hover:border-primary-container transition-colors font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="sort">sort</span>
+                    Sort
+                </button>
+</div>
+</div>
+<!-- Listing Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer relative">
+<div class="absolute top-4 right-4 z-10 bg-secondary-container/90 text-on-secondary-container px-3 py-1 rounded-full font-label-mono text-label-mono flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" data-weight="fill">verified</span>
+                    Verified
+                </div>
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, modern apartment interior with floor-to-ceiling windows overlooking a city skyline. The room is decorated in neutral tones with high-end modern furniture. Bright, natural light floods the space, highlighting the premium finishes and spacious layout. Established Modernity style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACf7iYajUO8JJWTh_jFMunU2sgxLmrWhoiEM_uptClXOaEGqgG4SbFcR64mZBO2-r1M6y7g1_NoWiXwbF8lW-n5OvprggtR65l97pmmmeS5jA4ywfAiqorCu22EOiW8uohcHmQF1K_MVKtulgmQ5dnzJCoaB6B5ESZ_g_HcSxWjuyJjLjLNJ75sp5CpmLk1bkwZ57-aRyV3InEN4kXNbTNjJd87zZpgMJfmeWui0fcHKGiJ07SRDzE">
+<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<p class="font-headline-sm text-headline-sm truncate">The Luminary Residences</p>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-headline-sm text-primary-container">$450,000</p>
+<p class="font-label-mono text-label-mono text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            Masaki, Dar es Salaam
+                        </p>
+</div>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="bed">bed</span>
+                            3 Beds
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="bathtub">bathtub</span>
+                            2.5 Baths
+                        </div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer relative">
+<div class="absolute top-4 right-4 z-10 bg-secondary-container/90 text-on-secondary-container px-3 py-1 rounded-full font-label-mono text-label-mono flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" data-weight="fill">verified</span>
+                    Verified
+                </div>
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Exterior view of a newly constructed modern luxury villa with a private infinity pool. The architecture features clean, boxy lines, white stucco, and large glass panels. The scene is lit by warm late-afternoon sunlight, creating a high-end, aspirational real estate vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC323M0RlWlcsHjyDGQjZoW5KDE8HW74DOcBGhyOiD-fvHiIh84XuBvFKF8CG7zWDiBg3uEwHs5yh16gdsUZ5F4d7vmoW6glVMjXKhMIsx8_tkoFAm-5irEJN65XlwhmvZ_6UY5BNgLUqxAUr_2iQmFHgJgY7xEu7WmeEi7qSdu5JgVqtsOk6OR0Qa6SUvZnxk6GLKjLwQn8hBSrc8iDU_meVxXmiMGKHo2fa7DtAiE6Q7bv8OCl14M">
+<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<p class="font-headline-sm text-headline-sm truncate">Azure Heights Villa</p>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-headline-sm text-primary-container">$1,200,000</p>
+<p class="font-label-mono text-label-mono text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            Oyster Bay
+                        </p>
+</div>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="bed">bed</span>
+                            5 Beds
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="bathtub">bathtub</span>
+                            6 Baths
+                        </div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer relative">
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern commercial office space interior with an open floor plan. Sleek desks, ergonomic chairs, and industrial-chic exposed ceilings. The space is bright and professional, conveying a premium commercial real estate offering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQv0gR7u14ucsI14smYZWds0tXLeyoB5wH7a4cD7qSPbQOycabdGQdcEM0inG0nMsHR_U4pdwRNE_Nhc7m15w923tCJfo41ptZ0h4_yidXQ4GE58Gvv3Rd479y0rFqvUGySIdGEddDzfGcTIBvKiBECjzQ6GRZqU7TBVg9FyD7lZLSFImwRX33WZZc1E9hQSMRGVuhz0qsfuvFGakFey45dcdeqq2UevsQ1_xdQ8UlWiwkbJp2fK15">
+<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<p class="font-headline-sm text-headline-sm truncate">Tech Hub Workspace</p>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-headline-sm text-primary-container">Lease / sqft</p>
+<p class="font-label-mono text-label-mono text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            CBD, Dar es Salaam
+                        </p>
+</div>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="square_foot">square_foot</span>
+                            5,000 sqft
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="business">business</span>
+                            Commercial
+                        </div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer relative">
+<div class="absolute top-4 right-4 z-10 bg-secondary-container/90 text-on-secondary-container px-3 py-1 rounded-full font-label-mono text-label-mono flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" data-weight="fill">verified</span>
+                    Verified
+                </div>
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious penthouse living room with panoramic views of the ocean. High ceilings, marble floors, and contemporary art pieces. The scene exudes wealth and sophistication, fitting for a high-net-worth real estate listing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmJGhsXTBBCYLRz798RUgCFMKpt9c7R9KhJybs_s5opnJTI8rabTGyPqrXf9uvqXQuAY16RqHRUhCmjqga6kENDm9R5jcFnpPqIJuZUOZroCakKSRJxlTHjtm4jkhqKkMrnQHwK0OsxbpvwA_CIQtjV8lCpIeorLVzNVNmcx3ZCJRmlyrqBaXGIXWQWv_DECWPvGr0yYB_M4wKEQsvTWpuPgWvafq0wCZC9okjRB4qx9G6OjvOtKGw">
+<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<p class="font-headline-sm text-headline-sm truncate">Oceanfront Penthouse</p>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-headline-sm text-primary-container">$2,500,000</p>
+<p class="font-label-mono text-label-mono text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            Msasani Peninsula
+                        </p>
+</div>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="bed">bed</span>
+                            4 Beds
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="bathtub">bathtub</span>
+                            4.5 Baths
+                        </div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer relative">
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An ongoing premium construction site for a residential tower. Steel beams and concrete structures are visible against a bright blue sky. Professional cranes and equipment suggest a high-quality, large-scale development project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCSaC2w0e9F9vYdYha9YWbZZHULZJaT0JMyXh4HKcSW4jrBRztqaGf6DV0bQCXK9bB3hkYKVg5ma8MsVlWIfMCM-G5BcWMU1NNkQDSJoODiI8PciGgPBB8RhnW5p3kc88FHI9ZybpVxyYUgOO-tsN-E9ZCzL-gZAs7ivysG7mxjrQEuJ0pClL5efi6z657PiSU0SfCsXTfDtMxDMAhH4SlQcq-ZeTWSp9lzP1YsBm9mu8ssNdFOr0">
+<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<p class="font-headline-sm text-headline-sm truncate">Sunset Towers (Off-Plan)</p>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-headline-sm text-primary-container">From $200k</p>
+<p class="font-label-mono text-label-mono text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            Upanga
+                        </p>
+</div>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="construction">construction</span>
+                            Q4 2025
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="apartment">apartment</span>
+                            Development
+                        </div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer relative">
+<div class="absolute top-4 right-4 z-10 bg-secondary-container/90 text-on-secondary-container px-3 py-1 rounded-full font-label-mono text-label-mono flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" data-weight="fill">verified</span>
+                    Verified
+                </div>
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern suburban home with a manicured lawn and a spacious driveway. The architecture blends traditional elements with modern large windows. Warm lighting suggests a welcoming, high-quality family residence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDurab_CaqwptN1QIeXKOQtpRrYM8B6GAgVe5Qb8mCq38J2RFnTbXI3lw1-zv5-aUddZC2PPcd25i3V4Sc-8OJ5oMbALk2KCwsLRfD025OFR6vXRZ4KPxbY68JKs2F85gljuLANTzfkAV_vwNsWUMTztdJgynhAk__QuPUIDhRZ2IQdo3_eF6IVWglx96T5GAbvtrcD01jUMkvOq44bRO_ImYTNIdFfDA_p6I_J5jAZ_o_yQ5f8ZmkB">
+<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<p class="font-headline-sm text-headline-sm truncate">Greenfield Estate Home</p>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-headline-sm text-primary-container">$650,000</p>
+<p class="font-label-mono text-label-mono text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            Mikocheni
+                        </p>
+</div>
+<div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="bed">bed</span>
+                            4 Beds
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[18px]" data-icon="yard">yard</span>
+                            0.5 Acres
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- WhatsApp CTA -->
+<div class="mt-section-padding bg-primary-container text-on-primary rounded-[16px] p-margin-desktop text-center shadow-md">
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Don't see what you need?</h3>
+<p class="font-body-lg text-body-lg text-surface-variant mb-stack-lg max-w-xl mx-auto">Our portfolio includes off-market properties and custom construction solutions. Connect with our experts today.</p>
+<button class="bg-[#25D366] text-white px-8 py-4 rounded-full font-headline-sm text-headline-sm flex items-center gap-2 mx-auto hover:bg-[#1DA851] transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                Chat With Us on WhatsApp
+            </button>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary text-on-primary full-width border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg py-section-padding px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-stack-md">
+<a class="font-headline-sm text-headline-sm font-bold text-on-primary" href="#">
+                    UJENZI 25
+                </a>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant">Premium real estate and construction services tailored for the discerning client.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-mono text-label-mono text-on-primary-fixed-variant uppercase tracking-wider mb-2">Info</h4>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Our Team</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-mono text-label-mono text-on-primary-fixed-variant uppercase tracking-wider mb-2">Services</h4>
+<a class="font-body-md text-body-md text-secondary-container hover:text-secondary-container transition-colors" href="#">Real Estate</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Construction</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Property Management</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-mono text-label-mono text-on-primary-fixed-variant uppercase tracking-wider mb-2">Contact</h4>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="mail">mail</span>
+                    info@ujenzi25.com
+                </p>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="phone">phone</span>
+                    +255 123 456 789
+                </p>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-6 text-center">
+<p class="font-label-mono text-label-mono text-on-primary-fixed-variant">© 2024 UJENZI 25. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

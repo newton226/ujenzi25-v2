@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UJENZI 25 - About Us</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "navy": "#1F2A44",
+                        "orange": "#D97706",
+                        "light-bg": "#F3F4F6",
+                        "footer-bg": "#0F172A",
+                        "on-surface": "#1b1b1d",
+                        "surface-variant": "#e4e2e4",
+                        "on-secondary-fixed": "#2f1500",
+                        "on-background": "#1b1b1d",
+                        "on-tertiary-fixed-variant": "#534600",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "inverse-primary": "#bbc6e7",
+                        "primary": "#1F2A44", /* Adjusted to Deep Navy */
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#f8e288",
+                        "on-primary-fixed": "#0f1b34",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#6d5e10",
+                        "tertiary-container": "#beab57",
+                        "on-secondary-container": "#663500",
+                        "surface-bright": "#fbf8fb",
+                        "on-tertiary-fixed": "#221b00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#4b3f00",
+                        "on-primary-fixed-variant": "#3b4662",
+                        "primary-fixed": "#d9e2ff",
+                        "outline-variant": "#c6c6ce",
+                        "surface": "#F3F4F6", /* Adjusted to light-bg */
+                        "tertiary-fixed-dim": "#dbc66f",
+                        "on-surface-variant": "#45464d",
+                        "secondary-container": "#fe932c",
+                        "surface-container-low": "#f5f3f5",
+                        "primary-fixed-dim": "#bbc6e7",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "outline": "#76777e",
+                        "primary-container": "#1f2a44",
+                        "surface-container": "#f0edf0",
+                        "background": "#F3F4F6", /* Adjusted to light-bg */
+                        "secondary": "#D97706", /* Adjusted to Warm Orange */
+                        "inverse-surface": "#303032",
+                        "surface-container-highest": "#e4e2e4",
+                        "surface-container-high": "#eae7ea",
+                        "secondary-fixed": "#ffdcc3",
+                        "on-primary-container": "#8691b0",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#535e7b",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcd9dc",
+                        "secondary-fixed-dim": "#ffb77d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Sora"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "label-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .clip-path-banner { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+        .clip-path-bottom { clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
+    </style>
+</head>
+<body class="bg-light-bg text-gray-800 antialiased flex flex-col min-h-screen">
+<!-- BEGIN: Top Bar -->
+<div class="bg-black text-white text-xs py-1 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto flex justify-end space-x-4">
+<a class="hover:text-orange" href="#">Swahili</a>
+<span>|</span>
+<a class="hover:text-orange" href="#">FAQs</a>
+<span>|</span>
+<a class="hover:text-orange" href="#">Staff Mail</a>
+<span>|</span>
+<a class="hover:text-orange" href="#">Service Desk</a>
+</div>
+</div>
+<!-- END: Top Bar -->
+<!-- BEGIN: Main Header -->
+<header class="bg-[#F8E7C6] py-4 px-4 sm:px-6 lg:px-8 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzyDsoaFzJ6ty2ZhfD8-jNjvPQ5azXbNZxdKD0BEHUSd2iRIevWxteSTs-SaLyUCvc6Q2-DnCusgIgcwDrl6lLhqaT40_Cy53fCt1BpbZ3D54wJbK7Wq26W45rP9gtPOc-WWVoLH00z7fHNGrqDnzcz3zKDuzyQxC0CSIusypdFKXupkYNj7hMUCTsQ0e1NpnuZZ1f7Tvi_cWqXQ1bdlAXQkZJMu5ExWDbt75XhGT-aHJpXDmlhkrj');">
+<div class="absolute inset-0 bg-yellow-900/10 mix-blend-multiply pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+<!-- Logo & Title Left -->
+<div class="flex items-center space-x-4 mb-4 md:mb-0">
+<a class="w-20 h-20 bg-navy text-white flex items-center justify-center rounded shadow-lg border-2 border-orange" href="index.html">
+<i class="fa-solid fa-house-chimney text-3xl"></i>
+</a>
+<div class="text-center md:text-left">
+<h1 class="text-2xl md:text-3xl font-headline-md text-navy uppercase tracking-wider">UJENZI 25</h1>
+<p class="text-sm md:text-base font-semibold text-gray-800">ISO 9001: 2015 CERTIFIED</p>
+<p class="text-xs italic text-gray-700">"Your dream, Our foundation"</p>
+</div>
+</div>
+<!-- Logo Right -->
+<div class="hidden md:block">
+<div class="w-32 h-16 bg-navy text-white flex items-center justify-center rounded shadow-lg border-2 border-orange font-headline-sm">
+<span class="font-bold">UJENZI 25</span>
+</div>
+</div>
+</div>
+</header>
+<!-- END: Main Header -->
+<!-- BEGIN: Main Navigation -->
+<nav class="bg-yellow-400 py-2 shadow-sm relative z-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-sm font-bold text-navy">
+<li><a class="hover:text-orange" href="index.html">Home</a></li>
+<li class="relative group">
+<a class="text-orange flex items-center border-b-2 border-orange pb-0.5" href="about.html">About Us <i class="fa-solid fa-chevron-down ml-1 text-xs"></i></a>
+</li>
+<li class="relative group">
+<a class="hover:text-orange flex items-center" href="services.html">Consultation <i class="fa-solid fa-chevron-down ml-1 text-xs"></i></a>
+</li>
+<li class="relative group">
+<a class="hover:text-orange flex items-center" href="#">Construction <i class="fa-solid fa-chevron-down ml-1 text-xs"></i></a>
+</li>
+<li><a class="hover:text-orange" href="#">Real Estate</a></li>
+<li class="relative group">
+<a class="hover:text-orange flex items-center" href="#">Media Center <i class="fa-solid fa-chevron-down ml-1 text-xs"></i></a>
+</li>
+<li><a class="hover:text-orange" href="portfolio.html">Projects</a></li>
+<li><a class="hover:text-orange" href="#">Careers</a></li>
+<li><a class="hover:text-orange" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</nav>
+<!-- END: Main Navigation -->
+<main class="flex-grow pb-24">
+<!-- Hero Section -->
+<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto mt-8">
+<div class="text-center max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-sm border-t-4 border-navy">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-navy mb-stack-md uppercase">Building Tanzania, One Foundation at a Time</h1>
+<p class="font-body-lg text-body-lg text-gray-600">Delivering premium construction and development solutions with uncompromising quality and local expertise.</p>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="mb-6 border-b-2 border-black pb-2">
+<h3 class="inline-block bg-black text-white px-4 py-2 font-bold uppercase rounded-t-md font-headline-sm">
+<i class="fa-solid fa-bullseye mr-2"></i> Our Mission
+            </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center bg-white p-6 rounded-lg shadow-sm">
+<div class="md:col-span-6">
+<img class="w-full h-auto rounded-xl shadow-md object-cover aspect-video md:aspect-square border-2 border-gray-100" data-alt="A professional architectural photograph of a modern, high-end corporate office in Dar es Salaam, Tanzania. The scene features a diverse team of architects and engineers reviewing blueprints around a large minimalist table. Sunlight streams through expansive floor-to-ceiling windows, casting soft shadows. The atmosphere is established, modern, and collaborative, with a color palette of crisp whites, deep navy accents, and warm natural wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYrBmtdpWlJc9DW2jNGLXxL4Vkn31SHM-rmyAoxg_5WkdQIihQ-Nbn7jPfsCb63WLNDkhn25IR8i8WNmc9rCsziQ7G2TEhwWiB-GadR7vPwOxZM01Rka2seaTWsDel9PSbixqQomgez4kCQAWd2qQzF9ugmOPVOJeDu5iBF6Df1CniNGIyNeacH72twrjX0aPcojKdHCeGhpjWnBQu_TpaMoTMtz9n3m-V_edYLbURGCaq8f5S_84O"/>
+</div>
+<div class="md:col-span-6 md:pl-stack-lg mt-6 md:mt-0">
+<p class="font-body-md text-body-md text-gray-700 mb-stack-md">At UJENZI 25, we are committed to reshaping the skyline and infrastructure of Tanzania through innovative engineering, sustainable practices, and unwavering dedication to excellence. Our approach bridges international standards with deep local understanding.</p>
+<p class="font-body-md text-body-md text-gray-700">We believe that every structure we build is a testament to our core values: integrity, precision, and partnership. From commercial high-rises to bespoke residential developments, our focus remains on delivering long-term value to our clients and communities.</p>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-12 bg-white border-y border-gray-200 shadow-sm mt-8">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter text-center">
+<div class="flex flex-col items-center justify-center p-stack-lg group">
+<div class="w-24 h-24 rounded-full bg-navy flex items-center justify-center mb-stack-sm shadow-md border-2 border-transparent group-hover:border-orange transition-all duration-300">
+<span class="font-display-lg text-display-lg text-white">50+</span>
+</div>
+<span class="font-label-mono text-label-mono text-gray-500 uppercase tracking-widest mt-stack-sm font-bold">Projects Delivered</span>
+</div>
+<div class="flex flex-col items-center justify-center p-stack-lg group">
+<div class="w-24 h-24 rounded-full bg-navy flex items-center justify-center mb-stack-sm shadow-md border-2 border-transparent group-hover:border-orange transition-all duration-300">
+<span class="font-display-lg text-display-lg text-white">5</span>
+</div>
+<span class="font-label-mono text-label-mono text-gray-500 uppercase tracking-widest mt-stack-sm font-bold">Core Services</span>
+</div>
+<div class="flex flex-col items-center justify-center p-stack-lg group">
+<div class="w-24 h-24 rounded-full bg-navy flex items-center justify-center mb-stack-sm shadow-md border-2 border-transparent group-hover:border-orange transition-all duration-300">
+<span class="font-display-lg text-display-lg text-white">25</span>
+</div>
+<span class="font-label-mono text-label-mono text-gray-500 uppercase tracking-widest mt-stack-sm font-bold">Est. 2025</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto mt-8">
+<div class="mb-6 border-b-2 border-black pb-2 text-center md:text-left">
+<h3 class="inline-block bg-black text-white px-4 py-2 font-bold uppercase rounded-t-md font-headline-sm">
+<i class="fa-solid fa-users mr-2"></i> Leadership
+            </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy flex flex-col items-center text-center transform hover:-translate-y-1 transition duration-300">
+<img class="w-40 h-40 rounded-full object-cover mb-stack-md border-4 border-gray-100 shadow-sm" data-alt="A professional, high-resolution corporate headshot of a confident Tanzanian male CEO in his mid-40s. He is wearing a sharp, modern navy blue suit with a crisp white shirt, standing against a clean, softly lit light gray background. The lighting is premium and flattering, conveying authority, trust, and modern business acumen. The aesthetic aligns with a high-end corporate construction firm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWgmqG3uqlkWP-EjPWjupXBDGWnmmapOMm4FHa8UMAvf1GF4CUj12DGyhpNyHQnEk9nRFRzNi5h3lpZQXJ6AzfIUzjyhxV9PNrAQ_TXc9jXeN2xFLPI9vw48PxPDR3boVliKMeXDBU3Ik-SudE55VWtkOZtkSFfj4TjKuQ9IIaPpSC2MM4-YP2SvEYM18wwSE-qMKuBl93vXIWxfAONpOeGqULsjyVOuQ4kwXpD6shLyOsqoGmrjHR"/>
+<h3 class="font-headline-sm text-headline-sm text-navy font-bold">David M.</h3>
+<p class="text-sm font-bold text-orange mb-stack-sm uppercase tracking-wide">Chief Executive Officer</p>
+<p class="font-body-md text-body-md text-gray-600 px-4">Over 15 years of experience leading major infrastructure projects across East Africa.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy flex flex-col items-center text-center transform hover:-translate-y-1 transition duration-300">
+<img class="w-40 h-40 rounded-full object-cover mb-stack-md border-4 border-gray-100 shadow-sm" data-alt="A professional, high-resolution corporate headshot of an experienced Tanzanian female Lead Engineer in her late 30s. She is wearing professional business attire with subtle safety gear hints, such as a high-quality branded polo under a tailored blazer. The background is a clean, bright architectural space with subtle structural elements out of focus. The lighting is crisp and modern, reflecting competence and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaH_2IJMNz5PmACGQuaLnH6Y1DF_2V3dSF4_DcyAbTZrgbK8UX69sBOGdNYlKF8qF60O_YUYqrMVzuaHAPVxH_aKVGBndKJTqD7A6ILz2Z3Vijr0mhEdHmIYAnZafnxghzyPibXJyVCFSqPHGtjuLnR5Ul10Tq0K0DOTJsLaRB4rPy8_KjPzvQPBNSXANoPSFdunbcj-0twKospHeej98jw9Yhup0WpEzNuFA_S1MbTpBidkeCTf_h"/>
+<h3 class="font-headline-sm text-headline-sm text-navy font-bold">Sarah K.</h3>
+<p class="text-sm font-bold text-orange mb-stack-sm uppercase tracking-wide">Lead Engineer</p>
+<p class="font-body-md text-body-md text-gray-600 px-4">Specializing in sustainable structural design and innovative construction methodologies.</p>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-12 mt-8">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="inline-block text-lg font-bold text-navy border-b-2 border-black pb-1 uppercase mb-8">
+<i class="fa-solid fa-award mr-2"></i> Accreditations &amp; Certifications
+            </h3>
+<div class="flex flex-wrap justify-center items-center gap-6">
+<div class="flex items-center space-x-3 bg-white px-8 py-4 rounded-lg shadow-md border border-gray-200 group hover:border-orange transition-colors">
+<i class="fa-solid fa-certificate text-2xl text-blue-600 group-hover:text-orange"></i>
+<span class="font-headline-sm text-headline-sm text-navy font-bold">NCC</span>
+</div>
+<div class="flex items-center space-x-3 bg-white px-8 py-4 rounded-lg shadow-md border border-gray-200 group hover:border-orange transition-colors">
+<i class="fa-solid fa-compass-drafting text-2xl text-blue-600 group-hover:text-orange"></i>
+<span class="font-headline-sm text-headline-sm text-navy font-bold">AQRB</span>
+</div>
+<div class="flex items-center space-x-3 bg-white px-8 py-4 rounded-lg shadow-md border border-gray-200 group hover:border-orange transition-colors">
+<i class="fa-solid fa-helmet-safety text-2xl text-blue-600 group-hover:text-orange"></i>
+<span class="font-headline-sm text-headline-sm text-navy font-bold">ERB</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-footer-bg text-white pt-12 pb-24 border-t-4 border-orange">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Footer Column 1 -->
+<div>
+<h4 class="text-lg font-bold mb-4 text-orange border-b border-gray-700 pb-2 font-headline-sm">About UJENZI 25</h4>
+<p class="text-sm text-gray-400 mb-4 font-body-md">
+                    UJENZI 25 is a premier construction and real estate development company dedicated to building the future of Tanzania with quality, integrity, and innovation.
+                </p>
+</div>
+<!-- Footer Column 2 -->
+<div>
+<h4 class="text-lg font-bold mb-4 text-orange border-b border-gray-700 pb-2 font-headline-sm">Quick Links</h4>
+<ul class="text-sm text-gray-400 space-y-2 font-body-md">
+<li><a class="hover:text-white transition" href="portfolio.html">Our Projects</a></li>
+<li><a class="hover:text-white transition" href="services.html">Consultation Services</a></li>
+<li><a class="hover:text-white transition" href="#">Careers</a></li>
+<li><a class="hover:text-white transition" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Footer Column 3 -->
+<div>
+<h4 class="text-lg font-bold mb-4 text-orange border-b border-gray-700 pb-2 font-headline-sm">Contact Us</h4>
+<ul class="text-sm text-gray-400 space-y-2 font-body-md">
+<li><i class="fa-solid fa-location-dot mr-2 w-4"></i> 123 Building Ave, Dar es Salaam</li>
+<li><i class="fa-solid fa-phone mr-2 w-4"></i> +255 123 456 789</li>
+<li><i class="fa-solid fa-envelope mr-2 w-4"></i> info@ujenzi25.co.tz</li>
+</ul>
+</div>
+<!-- Footer Column 4 -->
+<div>
+<h4 class="text-lg font-bold mb-4 text-orange border-b border-gray-700 pb-2 font-headline-sm">Connect With Us</h4>
+<div class="flex space-x-4">
+<a class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-orange transition" href="#">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-orange transition" href="#">
+<i class="fa-brands fa-twitter"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-orange transition" href="#">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-orange transition" href="#">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500 font-body-md">
+            © 2026 UJENZI 25. All rights reserved.
+        </div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>
