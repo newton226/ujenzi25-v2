@@ -1,0 +1,421 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Consultation Requests - UJENZI 25</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#dcd9dc",
+                      "on-tertiary-fixed": "#221b00",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#beab57",
+                      "surface": "#fbf8fb",
+                      "surface-variant": "#e4e2e4",
+                      "on-primary-fixed-variant": "#3b4662",
+                      "surface-container": "#f0edf0",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#303032",
+                      "on-primary-container": "#8691b0",
+                      "on-error": "#ffffff",
+                      "primary": "#09152e",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "outline-variant": "#c6c6ce",
+                      "on-tertiary-fixed-variant": "#534600",
+                      "background": "#fbf8fb",
+                      "outline": "#76777e",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#1f2a44",
+                      "surface-container-low": "#f5f3f5",
+                      "primary-fixed-dim": "#bbc6e7",
+                      "tertiary-fixed": "#f8e288",
+                      "on-surface-variant": "#45464d",
+                      "surface-container-high": "#eae7ea",
+                      "tertiary-fixed-dim": "#dbc66f",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "primary-fixed": "#d9e2ff",
+                      "surface-bright": "#fbf8fb",
+                      "secondary": "#904d00",
+                      "on-secondary-fixed": "#2f1500",
+                      "tertiary": "#6d5e10",
+                      "surface-tint": "#535e7b",
+                      "inverse-primary": "#bbc6e7",
+                      "surface-container-highest": "#e4e2e4",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1b1b1d",
+                      "on-tertiary-container": "#4b3f00",
+                      "secondary-fixed": "#ffdcc3",
+                      "secondary-container": "#fe932c",
+                      "on-primary-fixed": "#0f1b34",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-secondary-container": "#663500",
+                      "on-background": "#1b1b1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "margin-desktop": "48px",
+                      "stack-md": "16px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "section-padding": "80px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Sora"
+                      ],
+                      "headline-md": [
+                              "Sora"
+                      ],
+                      "display-lg-mobile": [
+                              "Sora"
+                      ],
+                      "display-lg": [
+                              "Sora"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "42px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-mono": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #FAFAF8; /* Premium light canvas */
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 2px 4px rgba(31, 42, 68, 0.08);
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 6px 12px rgba(31, 42, 68, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-primary dark:bg-primary font-headline-sm text-headline-sm docked full-width top-0 sticky z-50 backdrop-blur-md bg-opacity-90 shadow-sm flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto w-full transition-all duration-300">
+<!-- Brand Logo -->
+<div class="font-headline-md text-headline-md font-bold text-on-primary shrink-0">
+            UJENZI 25
+        </div>
+<!-- Desktop Navigation Links -->
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-on-primary transition-colors py-2 px-3 rounded hover:bg-white/10 duration-200" href="#">Home</a>
+<a class="font-label-mono text-label-mono text-secondary-container font-bold border-b-2 border-secondary-container pb-1 transition-colors py-2 px-3 rounded hover:bg-white/10 duration-200 scale-95" href="#">Services</a>
+<a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-on-primary transition-colors py-2 px-3 rounded hover:bg-white/10 duration-200" href="#">About</a>
+<a class="font-label-mono text-label-mono text-on-primary-fixed-variant hover:text-on-primary transition-colors py-2 px-3 rounded hover:bg-white/10 duration-200" href="#">Contact</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-stack-md shrink-0">
+<button class="font-label-mono text-label-mono text-on-primary hover:bg-white/10 transition-all duration-200 py-2 px-4 rounded border border-on-primary-fixed-variant">
+                EN/SW
+            </button>
+<button class="font-label-mono text-label-mono bg-secondary-container text-on-primary hover:bg-white/10 transition-all duration-200 py-2 px-6 rounded-lg font-bold">
+                Get Started
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-section-padding">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-stack-lg gap-stack-md">
+<div>
+<h1 class="font-headline-md text-headline-md text-primary mb-stack-sm">Consultation Requests</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage incoming client inquiries and drawing requests.</p>
+</div>
+<!-- Filter/Action (Optional Enhancement) -->
+<div class="flex gap-stack-sm">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface-variant rounded-lg border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="filter_list">filter_list</span>
+<span class="font-label-mono text-label-mono">Filter</span>
+</button>
+</div>
+</div>
+<!-- Table Container (Bento/Card Style) -->
+<div class="bg-surface-container-lowest rounded-xl soft-shadow overflow-hidden border border-outline-variant/30">
+<!-- Table Implementation -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant/30">
+<th class="p-4 font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">Client Name</th>
+<th class="p-4 font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">Date</th>
+<th class="p-4 font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">Drawing Type</th>
+<th class="p-4 font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="p-4 font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors group cursor-pointer">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-sm">
+                                        JM
+                                    </div>
+<div>
+<div class="font-body-md text-body-md font-semibold text-primary">Juma M.</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant">juma@example.com</div>
+</div>
+</div>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Oct 24, 2024</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Architectural Plan</td>
+<td class="p-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-mono text-[10px] uppercase tracking-wider">
+                                    Submitted
+                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="p-2 text-outline hover:text-primary transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors group cursor-pointer">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-tint text-on-primary flex items-center justify-center font-headline-sm text-sm">
+                                        AS
+                                    </div>
+<div>
+<div class="font-body-md text-body-md font-semibold text-primary">Amina S.</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant">amina@example.com</div>
+</div>
+</div>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Oct 22, 2024</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Structural Engineering</td>
+<td class="p-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-mono text-[10px] uppercase tracking-wider">
+                                    In Review
+                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="p-2 text-outline hover:text-primary transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors group cursor-pointer">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-headline-sm text-sm">
+                                        DK
+                                    </div>
+<div>
+<div class="font-body-md text-body-md font-semibold text-primary">David K.</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant">david@example.com</div>
+</div>
+</div>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Oct 20, 2024</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Interior Design</td>
+<td class="p-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-mono text-[10px] uppercase tracking-wider">
+                                    Quoted
+                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="p-2 text-outline hover:text-primary transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors group cursor-pointer">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-outline-variant text-on-surface-variant flex items-center justify-center font-headline-sm text-sm">
+                                        FL
+                                    </div>
+<div>
+<div class="font-body-md text-body-md font-semibold text-primary">Fatma L.</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant">fatma@example.com</div>
+</div>
+</div>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Oct 15, 2024</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Landscape Design</td>
+<td class="p-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-mono text-[10px] uppercase tracking-wider">
+                                    Delivered
+                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="p-2 text-outline hover:text-primary transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State (Hidden by default, toggleable via JS if needed) -->
+<div class="hidden flex-col items-center justify-center py-section-padding px-4 text-center" id="emptyState">
+<div class="w-24 h-24 bg-surface-container-low rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-[48px] text-outline-variant" data-icon="folder_open">folder_open</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">No requests yet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">When clients submit new consultation requests or drawing inquiries, they will appear here.</p>
+</div>
+<!-- Pagination (Bottom Bar) -->
+<div class="bg-surface-container-low border-t border-outline-variant/30 p-4 flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant">Showing 1-4 of 42</span>
+<div class="flex gap-2">
+<button class="p-2 rounded hover:bg-surface-container-highest transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 rounded hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary dark:bg-primary font-body-md text-body-md text-on-primary dark:text-on-primary full-width border-t border-outline-variant/20 grid grid-cols-1 md:grid-cols-4 gap-stack-lg py-section-padding px-margin-desktop max-w-container-max mx-auto w-full mt-auto">
+<!-- Brand / Info -->
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary mb-stack-md">
+                UJENZI 25
+            </div>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant mb-stack-md max-w-xs">
+                Premium construction and architectural services in Tanzania.
+            </p>
+<p class="font-label-mono text-label-mono text-on-primary-fixed-variant">
+                © 2024 UJENZI 25. All rights reserved.
+            </p>
+</div>
+<!-- Links Columns -->
+<div class="col-span-1">
+<h4 class="font-label-mono text-label-mono font-bold text-on-primary mb-stack-sm uppercase tracking-wider">Links</h4>
+<ul class="space-y-stack-sm">
+<li><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Info</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Services</a></li>
+<li><a class="font-body-md text-body-md text-secondary-container transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-mono text-label-mono font-bold text-on-primary mb-stack-sm uppercase tracking-wider">Services</h4>
+<ul class="space-y-stack-sm">
+<li><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Architectural Drawings</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Structural Plans</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-mono text-label-mono font-bold text-on-primary mb-stack-sm uppercase tracking-wider">Legal</h4>
+<ul class="space-y-stack-sm">
+<li><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</footer>
+<script>
+        // Simple script to toggle empty state for demonstration if needed in future
+        function toggleEmptyState(isEmpty) {
+            const table = document.querySelector('table').parentElement;
+            const pagination = table.nextElementSibling.nextElementSibling; // Get pagination div
+            const emptyState = document.getElementById('emptyState');
+            
+            if(isEmpty) {
+                table.style.display = 'none';
+                pagination.style.display = 'none';
+                emptyState.style.display = 'flex';
+            } else {
+                table.style.display = 'block';
+                pagination.style.display = 'flex';
+                emptyState.style.display = 'none';
+            }
+        }
+        
+        // Uncomment to test empty state
+        // toggleEmptyState(true);
+    </script>
+</body></html>

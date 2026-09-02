@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UJENZI 25 - From Blueprint to Keys</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#dcd9dc",
+                      "on-tertiary-fixed": "#221b00",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#beab57",
+                      "surface": "#fbf8fb",
+                      "surface-variant": "#e4e2e4",
+                      "on-primary-fixed-variant": "#3b4662",
+                      "surface-container": "#f0edf0",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#303032",
+                      "on-primary-container": "#8691b0",
+                      "on-error": "#ffffff",
+                      "primary": "#09152e",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "outline-variant": "#c6c6ce",
+                      "on-tertiary-fixed-variant": "#534600",
+                      "background": "#fbf8fb",
+                      "outline": "#76777e",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#1f2a44",
+                      "surface-container-low": "#f5f3f5",
+                      "primary-fixed-dim": "#bbc6e7",
+                      "tertiary-fixed": "#f8e288",
+                      "on-surface-variant": "#45464d",
+                      "surface-container-high": "#eae7ea",
+                      "tertiary-fixed-dim": "#dbc66f",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "primary-fixed": "#d9e2ff",
+                      "surface-bright": "#fbf8fb",
+                      "secondary": "#904d00",
+                      "on-secondary-fixed": "#2f1500",
+                      "tertiary": "#6d5e10",
+                      "surface-tint": "#535e7b",
+                      "inverse-primary": "#bbc6e7",
+                      "surface-container-highest": "#e4e2e4",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1b1b1d",
+                      "on-tertiary-container": "#4b3f00",
+                      "secondary-fixed": "#ffdcc3",
+                      "secondary-container": "#fe932c",
+                      "on-primary-fixed": "#0f1b34",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-secondary-container": "#663500",
+                      "on-background": "#1b1b1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "margin-desktop": "48px",
+                      "stack-md": "16px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "section-padding": "80px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Sora"
+                      ],
+                      "headline-md": [
+                              "Sora"
+                      ],
+                      "display-lg-mobile": [
+                              "Sora"
+                      ],
+                      "display-lg": [
+                              "Sora"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "42px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-mono": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .service-card-img-gradient {
+            background: linear-gradient(to top, rgba(217, 119, 6, 0.15) 0%, transparent 100%);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary docked full-width top-0 sticky z-50 backdrop-blur-md bg-opacity-90 shadow-sm border-none">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-primary">
+                UJENZI 25
+            </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-secondary-container font-bold border-b-2 border-secondary-container pb-1 font-label-mono text-label-mono hover:bg-white/10 transition-all duration-200" href="#">Home</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors font-label-mono text-label-mono hover:bg-white/10 transition-all duration-200" href="#">Services</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors font-label-mono text-label-mono hover:bg-white/10 transition-all duration-200" href="#">About</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary transition-colors font-label-mono text-label-mono hover:bg-white/10 transition-all duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-stack-md">
+<button class="bg-[#D97706] text-white px-6 py-2 rounded-xl font-label-mono text-label-mono hover:bg-white/10 transition-all duration-200 hidden md:block">Get Started</button>
+<button class="text-on-primary-fixed-variant hover:text-on-primary transition-colors font-label-mono text-label-mono">EN/SW</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-end">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A breathtaking, hyper-realistic architectural visualization of a luxurious, modern Tanzanian villa at dusk. The villa features clean lines, expansive glass walls, and a flat roof, seamlessly integrating with lush tropical landscaping. Warm, inviting interior lights spill out onto an infinity pool, reflecting the deep twilight sky. The overall aesthetic is 'Established Modernity', blending premium construction with elegant, airy design, using a corporate yet modern color palette. Shot in 8k, photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_w-shdscRaRUwJ-xjr3tVs_0bibqo7cEhNnsSTFGoan_SoKSaeXx4cm23AdnscZgFcoQF2eGF8_czRwqnlOR8WDLaiiQHk6m65p2xcfbQAocqf4wAbQ-aHcWSvQnNScV0pEbVtHlA2D4l7UODEE_O9Ixi14tp4A2byNcbiJoEj6MfHXQT7_HG0NZoDAw8ysZbHrVR9OotBNeS2IDSoNbib1D8SfOzS5LZfLtkFrGKpN1-WXe6A4-m')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full pb-section-padding text-on-primary">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-md max-w-3xl">From Blueprint to Keys — One Company, Five Services</h1>
+<p class="font-body-lg text-body-lg mb-stack-lg max-w-2xl text-on-primary-container">Your dream, our foundation.</p>
+<div class="flex flex-col sm:flex-row gap-stack-md">
+<button class="bg-[#D97706] text-white px-8 py-4 rounded-xl font-label-mono text-label-mono hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        Explore Our Services
+                        <span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+<button class="border-2 border-on-primary text-on-primary px-8 py-4 rounded-xl font-label-mono text-label-mono hover:bg-on-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
+                        Talk to Us
+                    </button>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-[#FAFAF8]">
+<div class="max-w-container-max mx-auto">
+<div class="mb-section-padding text-center">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">Our Integrated Services</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Comprehensive solutions for every stage of your property journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Service 01 & 02: Top Row -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-[16px] shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-shadow overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A meticulously organized architectural consultation meeting in a brightly lit, modern office. A team of diverse professionals in smart-casual attire are clustered around a large table, reviewing extensive blueprints and 3D architectural models of a premium property. Sunlight streams through large windows. The scene exudes professionalism, precision, and 'Established Modernity', using light and airy tones with navy and warm orange accents. Photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzGwIt1FmOF8npvxdMatXt-bkLDgD7uHbJbWZwoeYkEgIgdsGyyIe9ul2U-4Zw0CDAtQp0_LSoaVEYjJOOebdFiF6PnbBn2j44fo9hzzhHVzkvDFodt4ZxEYY_WPyrE5q0ftHS3euaJIZoT85VxDsvwvGzrxzQ0Eyw1q0nIufyewZN1Ml-nwh5AONY9OqQUuHfdYb5S3FGp2MRmo-Y_wwaOhtotdE938TukbD2wDUkaRJte6d7WBvM')"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 service-card-img-gradient"></div>
+<div class="absolute top-stack-md left-stack-md bg-primary text-[#beab57] w-12 h-12 rounded-full flex items-center justify-center font-label-mono text-label-mono shadow-sm">01</div>
+</div>
+<div class="p-stack-lg">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center mb-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Consultation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Expert guidance to lay the groundwork for your next major project.</p>
+</div>
+</div>
+<div class="md:col-span-5 bg-surface-container-lowest rounded-[16px] shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-shadow overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A dynamic, high-quality photograph of an active construction site for a luxury modern home. High-end scaffolding and heavy machinery are visible against a clear blue sky. Workers in pristine safety gear are coordinating a crane lift. The aesthetic is clean, industrial yet premium, emphasizing high-quality construction and engineering precision. Colors are crisp, with primary navy elements and warm safety orange details. Photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDA8f6yHMm2BJ3pm_UBS2Nrfnu74E3OhLDr232RS7oH1YJB9n3myQqyB5oGLQps0aD031V27rdj1RuR3oi9BueELbh5fChlqpRF6_pCO-7tIiUTK7wlYQy-i9WH7VksH4WwWkyxO_USKxJDdZ5p0lLgM6ydnzN4H-t8Ah0Dye4DwU50Uy_ZsQfkvv6zFVNjAxP4N3GzrnqnIoAUafNqxzX6u8XoeZngyUGL4U0PTea_47aZtHIrGyOH')"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 service-card-img-gradient"></div>
+<div class="absolute top-stack-md left-stack-md bg-primary text-[#beab57] w-12 h-12 rounded-full flex items-center justify-center font-label-mono text-label-mono shadow-sm">02</div>
+</div>
+<div class="p-stack-lg">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center mb-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="construction">construction</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Construction</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision engineering and building execution from groundbreak to handover.</p>
+</div>
+</div>
+<!-- Service 03, 04, 05: Bottom Row -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-[16px] shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic, wide-angle shot of a stunning, expansive luxury real estate property in Tanzania. The home features expansive manicured lawns and grand architectural facades under a bright, sunny sky. The image conveys wealth, exclusivity, and established modernity. The color palette is natural, airy, and bright, with subtle high-contrast lighting highlighting the building's features. Photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8VfpoguOKNPx20KsqTkOg2t3fYup1G7A4YIsCRJVBA-c0M8XThU1Hzf59V-JbfkhBpJTanXbyD1LUNOlonyOLQPHXDooKD5nEGQgW_eU2xXk1c3ATQTr9X2A4UDeO4Rv3x3iOUvgrL3AG9cvW8gYKdTbClO_hHWmJ2gDhhI-UP7VgZcY4M7dnfX1dnGsMeA3onD8MDrWoHYzyJ2MFm_pot6rUu8Uh6co3GwXw2lcLVxzvuFY6r5BP')"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 service-card-img-gradient"></div>
+<div class="absolute top-stack-md left-stack-md bg-primary text-[#beab57] w-12 h-12 rounded-full flex items-center justify-center font-label-mono text-label-mono shadow-sm">03</div>
+</div>
+<div class="p-stack-md">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center mb-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="real_estate_agent">real_estate_agent</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm text-xl">Real Estate</h3>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest rounded-[16px] shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="An interior shot of a beautifully furnished, high-end rental apartment living room. The decor is modern, chic, and inviting, featuring minimalist furniture, subtle indoor plants, and large windows offering a city skyline view. The lighting is soft and natural, creating a light-mode, airy aesthetic. The color scheme is neutral with sophisticated accents, embodying premium modern living. Photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRJMO819UynXkiAdVxXcm8_iZLk2ltY6IqTYaZbMQOo49k2FDcfuG7IS-0R8HLxf28-DTOJgXtX1b0dPF-pL-qZ7VvuX_-RM_gcYYjnyqMjRCA5LKoPtEoYp_9ItRVj6dr7gnUdkFpg6wghjTe323ZumrW1uOKMCHJzqDZbmaMEf9-mogxhv8UZASgeJIiQwmRQ-ULdZWdFTcGmGFMqtbPJTH_q18MBqWPy0b9Xb19CFIpN0WQQWEN')"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 service-card-img-gradient"></div>
+<div class="absolute top-stack-md left-stack-md bg-primary text-[#beab57] w-12 h-12 rounded-full flex items-center justify-center font-label-mono text-label-mono shadow-sm">04</div>
+</div>
+<div class="p-stack-md">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center mb-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="key">key</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm text-xl">Rentals</h3>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest rounded-[16px] shadow-[0_2px_4px_rgba(31,42,68,0.08)] hover:shadow-[0_6px_12px_rgba(31,42,68,0.08)] transition-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A visually striking view of a boutique luxury hotel lobby. The space is vast and modern, featuring high ceilings, grand structural pillars, and a sleek reception desk. Elegant, warm lighting complements the cool, polished stone floors. The aesthetic is highly polished and premium, utilizing deep navy accents and sophisticated neutrals to convey 'Established Modernity'. Photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB4wTldWIxH0x0mq2TWCsZPi88rE9VtDLMVObzOIA0no7_tC57yfexMTdZC4diH-78MJxOa7HsJHW5E92mRsitFoN5xfMfZEM7Qv12BUh7v6rW3IsBa5yojjjVmJY6JIyfAKJZqE7jsVoE4AjWRmNaTyxQnYpFsb3py7N06EBzhcPKwbH6eJ7oRlrcMsMHy4MBzlFdJS3Ppn8R63gSsu0k1UYSXrbZhYXfCZrSH318mT4Snk0NA81P')"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 service-card-img-gradient"></div>
+<div class="absolute top-stack-md left-stack-md bg-primary text-[#beab57] w-12 h-12 rounded-full flex items-center justify-center font-label-mono text-label-mono shadow-sm">05</div>
+</div>
+<div class="p-stack-md">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center mb-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="hotel">hotel</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm text-xl">Hotels</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg py-section-padding px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-4 flex justify-between items-center mb-stack-lg">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary">UJENZI 25</div>
+<div class="text-sm font-label-mono text-label-mono text-on-primary-fixed-variant">© 2024 UJENZI 25. All rights reserved.</div>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-mono text-label-mono text-secondary-container mb-2">Info</h4>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-mono text-label-mono text-secondary-container mb-2">Links</h4>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Projects</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">News</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-mono text-label-mono text-secondary-container mb-2">Services</h4>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Consultation</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">Construction</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-mono text-label-mono text-secondary-container mb-2">Contact</h4>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">hello@ujenzi25.com</a>
+<a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-container transition-colors" href="#">+255 123 456 789</a>
+</div>
+</div>
+</footer>
+</body></html>
